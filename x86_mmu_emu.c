@@ -91,7 +91,7 @@ static inline void set_page_entry(page_entry *entry, uintptr_t addr)
     entry->present = 1;
 }
 
-static void *get_addr_from_entry(page_entry *entry)
+static inline void *get_addr_from_entry(page_entry *entry)
 {
     return (void *)((size_t)entry->page_frame_address << page_shift());
 }
